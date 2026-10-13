@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarani - Personal Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: white;
+    color: black;
+    font-family: "Times New Roman", serif;
+}
+
+a {
+    color: black;
+}
+
+button {
+    background: white;
+    color: black;
+    border: 1px solid black;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
+
+.container {
+    width: 85%;
+    margin: 35px auto;
+    border: 1px solid black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid black;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    font-size: 14px;
+}
+
+.hero {
+    text-align: center;
+    padding: 45px 15px;
+    border-bottom: 1px solid black;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 35px 20px;
+    border-bottom: 1px solid black;
+    scroll-margin-top: 15px;
+}
+
+section h2 {
+    font-size: 23px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+section p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.services {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.service {
+    flex: 1 1 180px;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.service h3 {
+    margin-bottom: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    border: 1px solid black;
+    padding: 7px 12px;
+}
+
+.project {
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.project button {
+    margin-top: 10px;
+}
+
+.details {
+    display: none;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid black;
+}
+
+.details.show {
+    display: block;
+}
+
+form {
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid black;
+    background: white;
+    color: black;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 15px;
+}
+
+#status {
+    margin-top: 12px;
+    overflow-wrap: anywhere;
+}
+.contact-divider {
+    border: none;
+    border-top: 1px solid black;
+}
+.map {
+    width: 100%;
+    height: 350px;
+    border: 1px solid black;
+    display: block;
+    margin: 15px 0;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 22px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#topButton.visible {
+    display: block;
+}
+
+@media (max-width: 650px) {
+    .container {
+        width: 94%;
+        margin: 15px auto;
+    }
+
+    header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .map {
+        height: 280px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <header>
+        <a href="#home" class="logo">TARANI</a>
+
+        <nav aria-label="Main navigation">
+            <a href="#about">ABOUT</a>
+            <a href="#services">SERVICES</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#location">LOCATION</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero" id="home">
+            <h1>TARANI</h1>
+            <p>B.Tech Student - AI &amp; Machine Learning</p>
+
+            <a href="#about">
+                <button type="button">GET STARTED</button>
+            </a>
+        </div>
+        <section id="services">
+            <h2>OUR SERVICES</h2>
+
+            <div class="services">
+                <div class="service">
+                    <h3>Web Development</h3>
+                    <p>Creating simple and useful websites.</p>
+                </div>
+
+                <div class="service">
+                    <h3>Machine Learning</h3>
+                    <p>Exploring data and developing ML models.</p>
+                </div>
+
+                <div class="service">
+                    <h3>Programming</h3>
+                    <p>Building solutions through code.</p>
+                </div>
+            </div>
+        </section>
+        <section id="about">
+            <h2>ABOUT ME</h2>
+
+            <p>
+                Hello! I am Tarani, a B.Tech student interested in
+                Artificial Intelligence, Machine Learning, and
+                web development.
+            </p>
+
+            <p>
+                I enjoy learning new technologies, developing projects,
+                and improving my programming skills.
+            </p>
+
+            <p><strong>Education:</strong> B.Tech in AI &amp; ML</p>
+        </section>
+
+        <section id="skills">
+            <h2>MY SKILLS</h2>
+
+            <div class="skills">
+                <span class="skill">Python</span>
+                <span class="skill">Java</span>
+                <span class="skill">C</span>
+                <span class="skill">HTML</span>
+                <span class="skill">CSS</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">Artificial Intelligence</span>
+                <span class="skill">Machine Learning</span>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>MY PROJECTS</h2>
+
+            <div class="project">
+                <h3>AI Voice Assistant</h3>
+                <p>A voice-based assistant using Python.</p>
+
+                <button class="detailsButton" type="button"
+                        aria-expanded="false">
+                    VIEW DETAILS
+                </button>
+
+                <div class="details">
+                    <p>
+                        Uses speech recognition and text-to-speech
+                        to interact with users.
+                    </p>
+                    <p>Technology: Python</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Suggestion and Complaint Portal</h3>
+                <p>A website for collecting user feedback.</p>
+
+                <button class="detailsButton" type="button"
+                        aria-expanded="false">
+                    VIEW DETAILS
+                </button>
+
+                <div class="details">
+                    <p>
+                        Helps users submit suggestions and complaints
+                        through an online form.
+                    </p>
+                    <p>Technology: HTML, CSS, and JavaScript</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Tooth Segmentation Using U-Net++</h3>
+                <p>A deep learning project involving dental images.</p>
+
+                <button class="detailsButton" type="button"
+                        aria-expanded="false">
+                    VIEW DETAILS
+                </button>
+
+                <div class="details">
+                    <p>
+                        Identifies tooth regions in dental images
+                        using image segmentation.
+                    </p>
+                    <p>Technology: Python and deep learning</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>CONTACT ME</h2>
+            <p>Feel free to contact me using the form below.</p>
+
+            <form id="contactForm">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text"
+                       placeholder="Enter your name" required>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email"
+                       placeholder="Enter your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message"
+                          placeholder="Write your message"
+                          required></textarea>
+
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+
+            <p id="status" role="status" aria-live="polite"></p>
+        </section>
+        <hr class="contact-divider">
+        <section id="location">
+            <h2>MY LOCATION</h2>
+
+            <p>Amity University Bengaluru, Karnataka, India</p>
+
+            <iframe
+                class="map"
+                src="https://maps.google.com/maps?q=Amity%20University%20Bengaluru%2C%20Karnataka&t=&z=15&output=embed"
+                title="Amity University Bengaluru map"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=Amity+University+Bengaluru+Karnataka"
+               target="_blank"
+               rel="noopener noreferrer">
+                <button type="button">OPEN IN GOOGLE MAPS</button>
+            </a>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Tarani</p>
+        <a href="#home">BACK TO HOME</a>
+    </footer>
+
+</div>
+
+<button id="topButton" type="button">TOP ↑</button>
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+    document.querySelectorAll(".detailsButton").forEach(button => {
+        button.addEventListener("click", () => {
+            const details = button.nextElementSibling;
+            const isOpen = details.classList.toggle("show");
+
+            button.textContent = isOpen
+                ? "HIDE DETAILS"
+                : "VIEW DETAILS";
+
+            button.setAttribute("aria-expanded", String(isOpen));
+        });
+    });
+
+    const topButton = document.getElementById("topButton");
+
+    window.addEventListener("scroll", () => {
+        topButton.classList.toggle("visible", window.scrollY > 250);
+    });
+
+    topButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+    document.getElementById("contactForm").addEventListener(
+        "submit", event => {
+            event.preventDefault();
+
+            const form = event.currentTarget;
+            if (!form.reportValidity()) return;
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            const status = document.getElementById("status");
+            const recipient = "your-email@example.com";
+
+            if (recipient === "your-email@example.com") {
+                status.textContent =
+                    "Please add your email address in the JavaScript code.";
+                return;
+            }
+
+            const subject = encodeURIComponent(
+                "Portfolio message from " + name
+            );
+
+            const body = encodeURIComponent(
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\n\nMessage: " + message
+            );
+
+            window.location.href =
+                "mailto:" + recipient +
+                "?subject=" + subject +
+                "&body=" + body;
+
+            status.textContent = "Opening your email application.";
+        }
+    );
+</script>
+</body>
+</html>
